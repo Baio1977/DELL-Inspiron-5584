@@ -49,9 +49,9 @@
 - Applied cosmetics DSM
 - Cfg lock unlocked
 
-## PCI Section Screenshot
+## Info Section Screenshot
 
-![pcisection](./Screenshot/PCISEZ.png)
+![pcisection](./Screenshot/6.png)
 
 See [ioreg](./ioregmacbook.ioreg) for more clarification
 
