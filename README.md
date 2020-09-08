@@ -28,22 +28,19 @@
 
 - [x] Intel UHD 620 iGPU eDP Output (with Backlight)
 - [x] Intel UHD 620 iGPU HDMI Output
-- [x] ALC295 Internal Speakers
-- [x] ALC295 Native Combojack headphones
-- [x] ALC295 HDMI Audio Output
+- [x] ALC236 Internal Speakers
+- [x] ALC236 Native Combojack headphones
+- [x] ALC236 HDMI Audio Output
 - [x] All USB Ports 
 - [x] SpeedStep / Sleep / Wake
 - [x] I2C Touchpad with gesture
 - [x] Brightness Key
-- [x] Wi-Fi and Bluetooth Bcm94360ng Module
-- [x] Realtek RTL8168 LAN
+- [x] Wi-Fi and Bluetooth BCM943602BAED Module
+- [x] Realtek RTL8100 LAN
 - [x] USB Cardreader
 - [x] ACPI Battery
 - [x] NVRAM
 - [x] Windows boot from OpenCore
-- [ ] Fingerprint
-- [ ] dGPU Amd 530
-- [ ] ALC295 Combojack microphone
 
 ### Special Config:
 
