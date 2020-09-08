@@ -4,16 +4,15 @@
 
 | Component        | Brank                              |
 | ---------------- | ---------------------------------- |
-| CPU              | Intel i7 8550U                     |
+| CPU              | Intel i5 8265U                     |
 | iGPU             | Intel® UHD Graphics 620            |
-| dGPU             | AMD Radeon 530 (disabled on macOs) |
 | Display          | 1920x1080                          |
-| Audio            | Realtek ALC295                     |
-| Ram              | 32 Gb ddr4 2400 Mhz                |
-| Wifi + Bluetooth | Bcm94360ng (replaced)              |
-| NVMe             | Samsung 970 evo plus 500 Gb        |
-| SSD              | Samsung 850 evo 500gb              |
-| SmBios           | MacbookPro 14,1                    |
+| Audio            | Realtek ALC236                     |
+| Ram              | 8Gb ddr4 2400 Mhz                  |
+| Wifi + Bluetooth | BCM943602BAED                      |
+| NVMe             | Samsung 970 evo plus 512Gb         |
+| SSD              | Kingston A400 512gb                |
+| SmBios           | MacbookPro 15,2                    |
 | BootLoader       | OpenCore                           |
 
 ![infocatalina](./Screenshot/infomaccatalina.png)
@@ -52,10 +51,6 @@
 - Disabled unused device
 - Applied cosmetics DSM
 - Cfg lock unlocked
-
-### Post Install:
-Open terminal and run install.sh from PostInsall/ComboJackAlc295. After reboot insert jack and appears this image
-![jack](./Screenshot/Combojackfix.png)
 
 ## PCI Section Screenshot
 
