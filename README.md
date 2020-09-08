@@ -46,25 +46,24 @@
 
 - Usb port mapping performed
 - Disabled unused device
-- Applied cosmetics DSM
-- Cfg lock unlocked
+- Cosmetics DSM in Configplist
 
 ## Info Section Screenshot
 
 ![pcisection](./Screenshot/4.png)
 
-- SSDT DELL Inspiron 5584
+## Info Section SSDT Inspiron 5584
 
 ![SSDT Dell Inspiron 5584](./Screenshot/5.png)
 
 ## Credits
 
-- [Apple](https://apple.com) for macOS;
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and all the lovely hackintosh work.
+- [Apple](https://apple.com) for macOS;
+- [daliansky](https://github.com/daliansky)
 - [Dortiana](https://github.com/dortania)
+- [Hackintoshlifeit](https://github.com/Hackintoshlifeit)
 - [mald0n](https://github.com/MaLd0n)
 - [rehabman](https://github.com/RehabMan)
-- [daliansky](https://github.com/daliansky)
-- [Hackintoshlifeit](https://github.com/Hackintoshlifeit)
 
 # If you need help please contact us on [Telegram](https://t.me/HackintoshLife_it) or [Web](https://www.hackintoshlife.it/)
