@@ -17,7 +17,7 @@
 
 ![infocatalina](./Screenshot/1.jpg)
 
-![infobigsur](./Screenshot/2.jpg)
+![infobigsur](./Screenshot/2.jpg) ![infobigsur](./Screenshot/3.jpg) 
 
 ## DPCIManager Screenshot
 
