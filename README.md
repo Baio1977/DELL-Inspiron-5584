@@ -54,6 +54,7 @@
 ![pcisection](./Screenshot/4.png)
 
 - SSDT DELL Inspiron 5584
+
 ![SSDT Dell Inspiron 5584](./Screenshot/5.png)
 
 ## Credits
