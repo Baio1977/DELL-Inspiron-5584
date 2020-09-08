@@ -15,7 +15,7 @@
 | SmBios           | MacbookPro 15,2                    |
 | BootLoader       | OpenCore                           |
 
-![infocatalina](./Screenshot/infomaccatalina.png)
+![infocatalina](./Screenshot/1.jpg)
 
 ![infobigsur](./Screenshot/infocacbigsur.png)
 
