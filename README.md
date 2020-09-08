@@ -51,7 +51,7 @@
 
 ## Info Section Screenshot
 
-![pcisection](./Screenshot/6.png)
+![pcisection](./Screenshot/4.png)
 
 See [ioreg](./ioregmacbook.ioreg) for more clarification
 
