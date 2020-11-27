@@ -52,7 +52,7 @@
 
 ![pcisection](./Screenshot/4.png)
 
-## Info Section HMI Output
+## Info Section HDMI Output
 
 ![pcisection](./Screenshot/8.png)
 
