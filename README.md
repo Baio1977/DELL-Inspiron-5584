@@ -52,9 +52,9 @@
 
 ![pcisection](./Screenshot/4.png)
 
-## Info Section Screenshot
+## Info Section HMI Output
 
-![pcisection](./Screenshot/4.png)
+![pcisection](./Screenshot/8.png)
 
 ## Info Section SSDT Inspiron 5584
 
