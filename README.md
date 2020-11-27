@@ -52,6 +52,10 @@
 
 ![pcisection](./Screenshot/4.png)
 
+## Info Section Screenshot
+
+![pcisection](./Screenshot/4.png)
+
 ## Info Section SSDT Inspiron 5584
 
 ![SSDT Dell Inspiron 5584](./Screenshot/5.png)
