@@ -60,6 +60,7 @@
 
 ![SSDT Dell Inspiron 5584](./Screenshot/5.png)
 
+![SSDT Dell Inspiron 5584](./Screenshot/9.png)
 ## Credits
 
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and all the lovely hackintosh work.
