@@ -13,7 +13,7 @@
 | NVMe             | Samsung 970 evo plus 512Gb         |
 | SSD              | Kingston A400 512gb                |
 | SmBios           | MacbookPro 15,2                    |
-| BootLoader       | OpenCore                           |
+| BootLoader       | OpenCore 0.6.4                     |
 
 ![infocatalina](./Screenshot/1.jpg)
 
@@ -26,7 +26,6 @@
 
 ### What works and What doesn't or WIP:
 
-- [x] Intel UHD 620 iGPU eDP Output (with Backlight)
 - [x] Intel UHD 620 iGPU HDMI Output
 - [x] ALC236 Internal Speakers
 - [x] ALC236 Native Combojack headphones
