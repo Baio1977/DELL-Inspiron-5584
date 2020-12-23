@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLqazciW.aml, Wed Dec 23 18:17:54 2020
+ * Disassembly of iASLhZq4wO.aml, Thu Dec 24 00:20:50 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000080F (2063)
+ *     Length           0x00000825 (2085)
  *     Revision         0x02
- *     Checksum         0x02
+ *     Checksum         0x9A
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -29,6 +29,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (_SB_.PCI0.I2C0, DeviceObj)
     External (_SB_.PCI0.I2C0.TPD0, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
+    External (_SB_.PCI0.LPCB.ECDV, DeviceObj)
     External (_SB_.PCI0.LPCB.HPET, DeviceObj)
     External (_SB_.PCI0.LPCB.MATH._STA, UnknownObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
@@ -52,7 +53,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
             GPHD = 0x02
             STAS = One
             \_SB.ACOS = 0x80
-            \_SB.ACSE = One
+            \_SB.ACSE = Zero
             \_SB.PCI0.LPCB.MATH._STA = 0x0F
         }
     }
@@ -583,4 +584,3 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
         }
     }
 }
-
