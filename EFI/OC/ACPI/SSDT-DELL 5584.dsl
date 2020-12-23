@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLxAEvhN.aml, Wed Dec 23 17:30:48 2020
+ * Disassembly of iASLqazciW.aml, Wed Dec 23 18:17:54 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000EF4 (3828)
+ *     Length           0x0000080F (2063)
  *     Revision         0x02
- *     Checksum         0x97
+ *     Checksum         0x02
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -20,222 +20,59 @@
  */
 DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
 {
-    External (_SB_.ADP1, DeviceObj)
+    External (_SB_.AC__, DeviceObj)
+    External (_SB_.ACOS, IntObj)
+    External (_SB_.ACSE, IntObj)
     External (_SB_.PCI0, DeviceObj)
-    External (_SB_.PCI0.B0D4, DeviceObj)
-    External (_SB_.PCI0.CNVW, DeviceObj)
-    External (_SB_.PCI0.CNVW._STA, UnknownObj)
-    External (_SB_.PCI0.HDAS._STA, UnknownObj)
-    External (_SB_.PCI0.HECI._STA, UnknownObj)
-    External (_SB_.PCI0.HIDD, MethodObj)    // 5 Arguments
+    External (_SB_.PCI0.GFX0, DeviceObj)
     External (_SB_.PCI0.HIDG, BuffObj)
     External (_SB_.PCI0.I2C0, DeviceObj)
     External (_SB_.PCI0.I2C0.TPD0, DeviceObj)
-    External (_SB_.PCI0.I2C0.TPD0.HID2, IntObj)
-    External (_SB_.PCI0.I2C0.TPD0.SBFB, BuffObj)
-    External (_SB_.PCI0.I2C0.TPD0.SBFG, BuffObj)
-    External (_SB_.PCI0.I2C1, DeviceObj)
-    External (_SB_.PCI0.I2C1._STA, UnknownObj)
-    External (_SB_.PCI0.IGPU, DeviceObj)
-    External (_SB_.PCI0.IGPU.XRT6, MethodObj)    // 2 Arguments
     External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.HPET, DeviceObj)
+    External (_SB_.PCI0.LPCB.MATH._STA, UnknownObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
-    External (_SB_.PCI0.PPMC, DeviceObj)
+    External (_SB_.PCI0.LPCB.PS2M, DeviceObj)
     External (_SB_.PCI0.RP09, DeviceObj)
     External (_SB_.PCI0.RP09.PXSX, DeviceObj)
-    External (_SB_.PCI0.RP10, DeviceObj)
-    External (_SB_.PCI0.RP10.PXSX, DeviceObj)
     External (_SB_.PCI0.RP13, DeviceObj)
     External (_SB_.PCI0.RP13.PXSX, DeviceObj)
-    External (_SB_.PCI0.SAT0._STA, UnknownObj)
     External (_SB_.PCI0.SBUS, DeviceObj)
-    External (_SB_.PCI0.TP7D, MethodObj)    // 6 Arguments
-    External (_SB_.PCI0.TP7G, BuffObj)
-    External (_SB_.PCI0.XHC_, DeviceObj)
     External (_SB_.PR00, ProcessorObj)
-    External (CCI0, UnknownObj)
-    External (CCI1, UnknownObj)
-    External (CCI2, UnknownObj)
-    External (CCI3, UnknownObj)
-    External (CCI4, UnknownObj)
-    External (CTL0, UnknownObj)
-    External (CTL1, UnknownObj)
-    External (CTL2, UnknownObj)
-    External (CTL3, UnknownObj)
-    External (CTL4, UnknownObj)
-    External (CTL5, UnknownObj)
-    External (CTL6, UnknownObj)
-    External (CTL7, UnknownObj)
-    External (ECRD, UnknownObj)
-    External (FMD0, IntObj)
-    External (FMH0, IntObj)
-    External (FML0, IntObj)
-    External (HID2, UnknownObj)
-    External (HIDG, UnknownObj)
-    External (MGI0, UnknownObj)
-    External (MGI1, UnknownObj)
-    External (MGI2, UnknownObj)
-    External (MGI3, UnknownObj)
-    External (MGI4, UnknownObj)
-    External (MGI5, UnknownObj)
-    External (MGI6, UnknownObj)
-    External (MGI7, UnknownObj)
-    External (MGI8, UnknownObj)
-    External (MGI9, UnknownObj)
-    External (MGIA, UnknownObj)
-    External (MGIB, UnknownObj)
-    External (MGIC, UnknownObj)
-    External (MGID, UnknownObj)
-    External (MGIE, UnknownObj)
-    External (MGIF, UnknownObj)
-    External (MGO0, UnknownObj)
-    External (MGO1, UnknownObj)
-    External (MGO2, UnknownObj)
-    External (MGO3, UnknownObj)
-    External (MGO4, UnknownObj)
-    External (MGO5, UnknownObj)
-    External (MGO6, UnknownObj)
-    External (MGO7, UnknownObj)
-    External (MGO8, UnknownObj)
-    External (MGO9, UnknownObj)
-    External (MGOA, UnknownObj)
-    External (MGOB, UnknownObj)
-    External (MGOC, UnknownObj)
-    External (MGOD, UnknownObj)
-    External (MGOE, UnknownObj)
-    External (MGOF, UnknownObj)
-    External (SBFB, UnknownObj)
-    External (SBFG, UnknownObj)
+    External (GPHD, FieldUnitObj)
     External (SSD0, IntObj)
     External (SSH0, IntObj)
     External (SSL0, IntObj)
-    External (TP7G, UnknownObj)
-    External (XDCE, UnknownObj)
-    External (XPRW, MethodObj)    // 2 Arguments
+    External (STAS, IntObj)
+
+    Scope (\)
+    {
+        If (_OSI ("Darwin"))
+        {
+            GPHD = 0x02
+            STAS = One
+            \_SB.ACOS = 0x80
+            \_SB.ACSE = One
+            \_SB.PCI0.LPCB.MATH._STA = 0x0F
+        }
+    }
 
     Scope (\_SB)
     {
-        Scope (ADP1)
+        Scope (AC)
         {
-            Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
+            If (_OSI ("Darwin"))
             {
-                0x18, 
-                0x03
-            })
-        }
-
-        Device (ALS0)
-        {
-            Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
-            Name (_CID, "smc-als")  // _CID: Compatible ID
-            Name (_ALI, 0x012C)  // _ALI: Ambient Light Illuminance
-            Name (_ALR, Package (0x01)  // _ALR: Ambient Light Response
-            {
-                Package (0x02)
+                Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
                 {
-                    0x64, 
-                    0x012C
-                }
-            })
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-        }
-
-        Device (PNLF)
-        {
-            Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
-            Name (_CID, "backlight")  // _CID: Compatible ID
-            Name (_UID, 0x13)  // _UID: Unique ID
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (0x0B)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-        }
-
-        Device (USBX)
-        {
-            Name (_ADR, Zero)  // _ADR: Address
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg2 == Zero))
-                {
-                    Return (Buffer (One)
-                    {
-                         0x03                                             // .
-                    })
-                }
-
-                Return (Package (0x08)
-                {
-                    "kUSBSleepPowerSupply", 
-                    0x13EC, 
-                    "kUSBSleepPortCurrentLimit", 
-                    0x0834, 
-                    "kUSBWakePowerSupply", 
-                    0x13EC, 
-                    "kUSBWakePortCurrentLimit", 
-                    0x0834
+                    0x18, 
+                    0x03
                 })
-            }
-
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
             }
         }
 
         Scope (PCI0)
         {
-            Scope (B0D4)
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (Zero)
-                }
-                Else
-                {
-                }
-            }
-
-            Scope (CNVW)
-            {
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        Return (Zero)
-                    }
-                    Else
-                    {
-                        Return (0x0F)
-                    }
-                }
-            }
-
             Device (GAUS)
             {
                 Name (_ADR, 0x00080000)  // _ADR: Address
@@ -252,130 +89,67 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 }
             }
 
-            Name (HDAS._STA, Zero)  // _STA: Status
-            Device (HDEF)
+            Scope (GFX0)
             {
-                Name (_ADR, 0x001F0003)  // _ADR: Address
-                Method (_STA, 0, NotSerialized)  // _STA: Status
+                Device (PNLF)
                 {
-                    If (_OSI ("Darwin"))
+                    Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
+                    Name (_CID, "backlight")  // _CID: Compatible ID
+                    Name (_UID, 0x13)  // _UID: Unique ID
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0B)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
                     }
                 }
             }
 
             Scope (I2C0)
             {
-                Method (PKGX, 3, Serialized)
+                If (_OSI ("Darwin"))
                 {
-                    Name (PKG, Package (0x03)
+                    Method (PKGX, 3, Serialized)
                     {
-                        Zero, 
-                        Zero, 
-                        Zero
-                    })
-                    PKG [Zero] = Arg0
-                    PKG [One] = Arg1
-                    PKG [0x02] = Arg2
-                    Return (PKG) /* \_SB_.PCI0.I2C0.PKGX.PKG_ */
-                }
+                        Name (PKG, Package (0x03)
+                        {
+                            Zero, 
+                            Zero, 
+                            Zero
+                        })
+                        PKG [Zero] = Arg0
+                        PKG [One] = Arg1
+                        PKG [0x02] = Arg2
+                        Return (PKG) /* \_SB_.PCI0.I2C0.PKGX.PKG_ */
+                    }
 
-                Method (SSCN, 0, NotSerialized)
-                {
-                    Return (PKGX (SSH0, SSL0, SSD0))
-                }
-
-                Method (FMCN, 0, NotSerialized)
-                {
-                    Name (PKG, Package (0x03)
+                    Method (SSCN, 0, NotSerialized)
                     {
-                        0x0101, 
-                        0x012C, 
-                        0x62
-                    })
-                    Return (PKG) /* \_SB_.PCI0.I2C0.FMCN.PKG_ */
+                        Return (PKGX (SSH0, SSL0, SSD0))
+                    }
+
+                    Method (FMCN, 0, NotSerialized)
+                    {
+                        Name (PKG, Package (0x03)
+                        {
+                            0x0101, 
+                            0x012C, 
+                            0x62
+                        })
+                        Return (PKG) /* \_SB_.PCI0.I2C0.FMCN.PKG_ */
+                    }
                 }
 
                 Scope (TPD0)
                 {
-                    Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
-                    {
-                        If ((Arg0 == HIDG))
-                        {
-                            Return (HIDD (Arg0, Arg1, Arg2, Arg3, HID2))
-                        }
-
-                        If ((Arg0 == TP7G))
-                        {
-                            Return (TP7D (Arg0, Arg1, Arg2, Arg3, SBFB, SBFG))
-                        }
-
-                        Return (Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                    }
-                }
-            }
-
-            Scope (I2C1)
-            {
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
                     If (_OSI ("Darwin"))
                     {
-                        Return (Zero)
-                    }
-                    Else
-                    {
-                        Return (0x0F)
-                    }
-                }
-            }
-
-            Scope (IGPU)
-            {
-                Method (BRT6, 2, NotSerialized)
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        If ((Arg0 == One))
-                        {
-                            Notify (\_SB.PCI0.LPCB.PS2K, 0x0406)
-                            Notify (\_SB.PCI0.LPCB.PS2K, 0x10) // Reserved
-                        }
-
-                        If ((Arg0 & 0x02))
-                        {
-                            Notify (\_SB.PCI0.LPCB.PS2K, 0x0405)
-                            Notify (\_SB.PCI0.LPCB.PS2K, 0x20) // Reserved
-                        }
-                    }
-                    Else
-                    {
-                        \_SB.PCI0.IGPU.XRT6 (Arg0, Arg1)
-                    }
-                }
-            }
-
-            Name (HECI._STA, Zero)  // _STA: Status
-            Device (IMEI)
-            {
-                Name (_ADR, 0x00160000)  // _ADR: Address
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
+                        Name (OSYS, 0x07DC)
                     }
                 }
             }
@@ -448,6 +222,22 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                     }
                 }
 
+                Device (EC)
+                {
+                    Name (_HID, "ACID0001")  // _HID: Hardware ID
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0F)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
+                }
+
                 Device (FWHD)
                 {
                     Name (_HID, EisaId ("INT0800") /* Intel 82802 Firmware Hub Device */)  // _HID: Hardware ID
@@ -491,6 +281,13 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 Device (PMCR)
                 {
                     Name (_HID, EisaId ("APP9876"))  // _HID: Hardware ID
+                    Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
+                    {
+                        Memory32Fixed (ReadWrite,
+                            0xFE000000,         // Address Base
+                            0x00010000,         // Address Length
+                            )
+                    })
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
@@ -502,14 +299,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                             Return (Zero)
                         }
                     }
-
-                    Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
-                    {
-                        Memory32Fixed (ReadWrite,
-                            0xFE000000,         // Address Base
-                            0x00010000,         // Address Length
-                            )
-                    })
                 }
 
                 Scope (PS2K)
@@ -539,6 +328,21 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         }
                     })
                 }
+
+                Scope (PS2M)
+                {
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (Zero)
+                        }
+                        Else
+                        {
+                            Return (0x0F)
+                        }
+                    }
+                }
             }
 
             Device (MCHC)
@@ -557,54 +361,24 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 }
             }
 
-            Device (PPMC)
-            {
-                Name (_ADR, 0x001F0002)  // _ADR: Address
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
-                    }
-                }
-            }
-
             Scope (RP09)
             {
                 Scope (PXSX)
                 {
-                    Name (_STA, Zero)  // _STA: Status
-                }
-
-                Device (GIGE)
-                {
-                    Name (_ADR, Zero)  // _ADR: Address
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
                         {
-                            Return (0x0F)
+                            Return (Zero)
                         }
                         Else
                         {
-                            Return (Zero)
+                            Return (0x0F)
                         }
                     }
                 }
-            }
 
-            Scope (RP10)
-            {
-                Scope (PXSX)
-                {
-                    Name (_STA, Zero)  // _STA: Status
-                }
-
-                Device (ARPT)
+                Device (GIGE)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Method (_STA, 0, NotSerialized)  // _STA: Status
@@ -625,7 +399,17 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
             {
                 Scope (PXSX)
                 {
-                    Name (_STA, Zero)  // _STA: Status
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (Zero)
+                        }
+                        Else
+                        {
+                            Return (0x0F)
+                        }
+                    }
                 }
 
                 Device (ANS0)
@@ -641,23 +425,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         {
                             Return (Zero)
                         }
-                    }
-                }
-            }
-
-            Name (SAT0._STA, Zero)  // _STA: Status
-            Device (SATA)
-            {
-                Name (_ADR, 0x00170000)  // _ADR: Address
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
                     }
                 }
             }
@@ -736,50 +503,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 }
             }
 
-            Scope (XHC)
-            {
-                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-                {
-                    If ((Arg2 == Zero))
-                    {
-                        Return (Buffer (One)
-                        {
-                             0x03                                             // .
-                        })
-                    }
-
-                    Return (Package (0x12)
-                    {
-                        "AAPL,slot-name", 
-                        "Internal@0,20,0", 
-                        "name", 
-                        "Intel XHC Controller", 
-                        "model", 
-                        Buffer (0x35)
-                        {
-                            "Cannon Point-LP USB 3.1 xHCI Controller"
-                        }, 
-
-                        "device_type", 
-                        Buffer (0x0F)
-                        {
-                            "USB Controller"
-                        }, 
-
-                        "AAPL,current-available", 
-                        0x0834, 
-                        "AAPL,current-extra", 
-                        0x0898, 
-                        "AAPL,current-extra-in-sleep", 
-                        0x0640, 
-                        "AAPL,device-internal", 
-                        0x02, 
-                        "AAPL,max-port-current-in-sleep", 
-                        0x0834
-                    })
-                }
-            }
-
             Device (XSPI)
             {
                 Name (_ADR, 0x001F0005)  // _ADR: Address
@@ -796,126 +519,68 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 }
             }
         }
-    }
 
-    If (CondRefOf (\_SB.PR00))
-    {
-        If ((ObjectType (\_SB.PR00) == 0x0C))
+        Scope (PR00)
         {
-            Scope (\_SB.PR00)
+            If (_OSI ("Darwin"))
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    Return (PMPM (Arg0, Arg1, Arg2, Arg3))
+                    If ((Arg2 == Zero))
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x02)
+                    {
+                        "plugin-type", 
+                        One
+                    })
                 }
             }
         }
-    }
 
-    Method (PMPM, 4, NotSerialized)
-    {
-        If ((Arg2 == Zero))
+        Device (USBX)
         {
-            Return (Buffer (One)
-            {
-                 0x03                                             // .
-            })
-        }
-
-        Return (Package (0x02)
-        {
-            "plugin-type", 
-            One
-        })
-    }
-
-    Method (GPRW, 2, NotSerialized)
-    {
-        If (_OSI ("Darwin"))
-        {
-            If ((0x6D == Arg0))
-            {
-                Return (Package (0x02)
-                {
-                    0x6D, 
-                    Zero
-                })
-            }
-
-            If ((0x0D == Arg0))
-            {
-                Return (Package (0x02)
-                {
-                    0x0D, 
-                    Zero
-                })
-            }
-        }
-
-        Return (XPRW (Arg0, Arg1))
-    }
-
-    Method (XOSI, 1, NotSerialized)
-    {
-        If (_OSI ("Darwin"))
-        {
-            If ((Arg0 == "Windows 2012"))
-            {
-                Return (0xFFFFFFFF)
-            }
-            Else
-            {
-                Return (Zero)
-            }
-        }
-        Else
-        {
-            Return (_OSI (Arg0))
-        }
-    }
-
-    Method (_TTS, 1, NotSerialized)  // _TTS: Transition To State
-    {
-        SLTP = Arg0
-    }
-
-    Name (SLTP, Zero)
-    Method (SRAM, 0, NotSerialized)
-    {
-        Return (Package (0x02)
-        {
-            "Intel Corporation, Series Chipset Shared SRAM", 
-            "RAM memory"
-        })
-    }
-
-    Method (DTGP, 5, NotSerialized)
-    {
-        If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b") /* Unknown UUID */))
-        {
-            If ((Arg1 == One))
+            Name (_ADR, Zero)  // _ADR: Address
+            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
             {
                 If ((Arg2 == Zero))
                 {
-                    Arg4 = Buffer (One)
-                        {
-                             0x03                                             // .
-                        }
-                    Return (One)
+                    Return (Buffer (One)
+                    {
+                         0x03                                             // .
+                    })
                 }
 
-                If ((Arg2 == One))
+                Return (Package (0x08)
                 {
-                    Return (One)
+                    "kUSBSleepPowerSupply", 
+                    0x13EC, 
+                    "kUSBSleepPortCurrentLimit", 
+                    0x0834, 
+                    "kUSBWakePowerSupply", 
+                    0x13EC, 
+                    "kUSBWakePortCurrentLimit", 
+                    0x0834
+                })
+            }
+
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (0x0F)
+                }
+                Else
+                {
+                    Return (Zero)
                 }
             }
         }
-
-        Arg4 = Buffer (One)
-            {
-                 0x00                                             // .
-            }
-        Return (Zero)
     }
 }
 
