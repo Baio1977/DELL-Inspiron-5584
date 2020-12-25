@@ -28,7 +28,7 @@
 
 - [x] Intel UHD 620 iGPU HDMI Output
 - [x] ALC236 Internal Speakers
-- [x] ALC236 Native Combojack headphones
+- [x] ALC236 Native Combojack (headphones no work)
 - [x] ALC236 HDMI Audio Output
 - [x] All USB Ports 
 - [x] SpeedStep / Sleep / Wake
@@ -60,6 +60,7 @@
 ![SSDT Dell Inspiron 5584](./Screenshot/5.png)
 
 ![SSDT Dell Inspiron 5584](./Screenshot/9.png)
+
 ## Credits
 
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and all the lovely hackintosh work.
@@ -67,7 +68,6 @@
 - [daliansky](https://github.com/daliansky)
 - [Dortiana](https://github.com/dortania)
 - [Hackintoshlifeit](https://github.com/Hackintoshlifeit)
-- [mald0n](https://github.com/MaLd0n)
 - [rehabman](https://github.com/RehabMan)
 
 # If you need help please contact us on [Telegram](https://t.me/HackintoshLife_it) or [Web](https://www.hackintoshlife.it/)

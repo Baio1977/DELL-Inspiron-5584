@@ -99,32 +99,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Rename BRT6 to XRT6(dell)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>QlJUNgKgC5M=</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>WFJUNgKgC5M=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Rename PBTN to PWRB</string>
 				<key>Count</key>
 				<integer>0</integer>
@@ -166,32 +140,6 @@
 				<data></data>
 				<key>Replace</key>
 				<data>U0xQQg==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Rename AC to ADP1</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>QUNfXw==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>QURQMQ==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -266,55 +214,6 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x15,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>I2C0 Controller</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset I2C0 Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset Express Root Port #9</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x1)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset PCI Express Root Port #10</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x4)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset PCI Express Root Port #13</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>layout-id</key>
-				<data>CwAAAA==</data>
-				<key>model</key>
-				<string>Apple High Definition Audio Controller ALC 236</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -323,123 +222,6 @@
 				<string>Host bridge</string>
 				<key>model</key>
 				<string>Intel Corporation, Series Chipset Host Bridge/DRAM Registers</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x12,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Signal Processing Controller</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset PCH Thermal Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>USB Controller</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset USB 3.1 xHCI Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>RAM Memory Controller</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset Shared SRAM</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>IMEI Communication Controller</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset IMEI Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>SATA AHCI Controller</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset SATA Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Ethernet Controller</string>
-				<key>model</key>
-				<string>RTL810xE PCI Express Fast Ethernet controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x1)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>AirPort Network Controller</string>
-				<key>model</key>
-				<string>Broadcom Brcm43xx Wireless Network Adapter</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x4)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Storage Memory Controller</string>
-				<key>model</key>
-				<string>Apple NVMe M2 Flash Drive SSD 970 Evo Plus</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>ISA bridge</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset LPCB Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>SMBus Serial Bus Controller</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset SMBus Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x5)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>XSPI Serial Bus Controller</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset SPI Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x4,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Signal Processing Controller</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset Dynamic Platform and Thermal</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>System Peripheral Gaussian Mixture</string>
-				<key>model</key>
-				<string>Intel Corporation, Series Chipset Gaussian Mixture Model</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -454,6 +236,8 @@
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
 				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
+				<key>enable-backlight-registers-fix</key>
 				<data>AQAAAA==</data>
 				<key>enable-hdmi-dividers-fix</key>
 				<data>AQAAAA==</data>
@@ -497,6 +281,172 @@
 				<string>onboard-1</string>
 				<key>model</key>
 				<string>Intel UHD Graphics 620</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x4,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>Signal Processing Controller</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset Dynamic Platform and Thermal</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>System Peripheral Gaussian Mixture</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset Gaussian Mixture Model</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x12,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>Signal Processing Controller</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset PCH Thermal Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>USB Controller</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset USB 3.1 xHCI Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>RAM Memory Controller</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset Shared SRAM</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x15,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>I2C0 Controller</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset I2C0 Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>IMEI Communication Controller</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset IMEI Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>SATA AHCI Controller</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset SATA Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset Express Root Port #9</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x1)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset PCI Express Root Port #10</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x4)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset PCI Express Root Port #13</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>ISA bridge</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset LPCB Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>layout-id</key>
+				<integer>14</integer>
+				<key>model</key>
+				<string>Apple High Definition Audio Controller ALC 236</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>SMBus Serial Bus Controller</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset SMBus Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x5)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>XSPI Serial Bus Controller</string>
+				<key>model</key>
+				<string>Intel Corporation, Series Chipset SPI Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>Ethernet Controller</string>
+				<key>model</key>
+				<string>RTL810xE PCI Express Fast Ethernet controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x1)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>AirPort Network Controller</string>
+				<key>model</key>
+				<string>Broadcom Brcm43xx Wireless Network Adapter</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x4)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built In</string>
+				<key>device_type</key>
+				<string>Storage Memory Controller</string>
+				<key>model</key>
+				<string>Apple NVMe M2 Flash Drive SSD 970 Evo Plus</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -654,13 +604,13 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>CodecCommander.kext</string>
+				<string>BrightnessKeys.kext</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CodecCommander</string>
+				<string>Contents/MacOS/BrightnessKeys</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1022,7 +972,7 @@
 			<key>PickerAttributes</key>
 			<integer>1</integer>
 			<key>PickerAudioAssist</key>
-			<true/>
+			<false/>
 			<key>PickerMode</key>
 			<string>External</string>
 			<key>PollAppleHotKeys</key>
@@ -1039,7 +989,7 @@
 			<key>AppleDebug</key>
 			<true/>
 			<key>ApplePanic</key>
-			<true/>
+			<false/>
 			<key>DisableWatchDog</key>
 			<true/>
 			<key>DisplayDelay</key>
@@ -1083,7 +1033,7 @@
 			<key>AuthRestart</key>
 			<false/>
 			<key>BlacklistAppleUpdate</key>
-			<false/>
+			<true/>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
 			<key>DmgLoading</key>
@@ -1114,10 +1064,10 @@
 		<dict>
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<dict>
-				<key>UIScale</key>
-				<data>AQ==</data>
 				<key>DefaultBackgroundColor</key>
 				<data>AAAAAA==</data>
+				<key>UIScale</key>
+				<data>AQ==</data>
 			</dict>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<dict>
@@ -1128,14 +1078,14 @@
 			<dict>
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
-				<key>run-efi-updater</key>
-				<string>No</string>
 				<key>boot-args</key>
 				<string>-v ps2rst=0 igfxonln=1 igfxagdc=0 brcmfx-country=#a</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
-				<string>it:4</string>
+				<data>aXQ6NA==</data>
+				<key>run-efi-updater</key>
+				<string>No</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1172,6 +1122,8 @@
 				<string>bluetoothInternalControllerInfo</string>
 				<string>flagstate</string>
 				<string>fmm-computer-name</string>
+				<string>fmm-mobileme-token-FMM</string>
+				<string>fmm-mobileme-token-FMM-BridgeHasAccount</string>
 				<string>nvda_drv</string>
 				<string>prev-lang:kbd</string>
 			</array>
@@ -1198,11 +1150,11 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02803207GUJH4RJC</string>
+			<string>C02846600GUJH4RFB</string>
 			<key>ProcessorType</key>
-			<integer>0</integer>
+			<integer>1793</integer>
 			<key>ROM</key>
-			<data>ESIzRFVm</data>
+			<data>ugrQTzPm</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
@@ -1210,9 +1162,24 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro15,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02W4ZYYJHCC</string>
+			<string>C02XPWYNJHCC</string>
 			<key>SystemUUID</key>
-			<string>2C65FA62-F93E-41E3-B6A7-2F514BB10A53</string>
+			<string>54637ADD-9049-4329-9BA4-82D0D32B0C08</string>
+		</dict>
+		<key>PlatformNVRAM</key>
+		<dict>
+			<key>BID</key>
+			<string>Mac-827FB448E656EC26</string>
+			<key>FirmwareFeatures</key>
+			<data>JvSP/QAAAAA=</data>
+			<key>FirmwareFeaturesMask</key>
+			<data>P/+f/wAAAAA=</data>
+			<key>MLB</key>
+			<string>C02846600GUJH4RFB</string>
+			<key>ROM</key>
+			<data>ugrQTzPm</data>
+			<key>SystemUUID</key>
+			<string>54637ADD-9049-4329-9BA4-82D0D32B0C08</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1262,6 +1229,7 @@
 		<key>Drivers</key>
 		<array>
 			<string>AudioDxe.efi</string>
+			<string>CrScreenshotDxe.efi</string>
 			<string>HfsPlus.efi</string>
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
@@ -1306,9 +1274,9 @@
 			<key>ReplaceTabWithSpace</key>
 			<false/>
 			<key>Resolution</key>
-			<string>1920x1080</string>
+			<string>Max</string>
 			<key>SanitiseClearScreen</key>
-			<true/>
+			<false/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
 			<key>UgaPassThrough</key>
@@ -1356,7 +1324,7 @@
 		<key>Quirks</key>
 		<dict>
 			<key>DeduplicateBootOrder</key>
-			<true/>
+			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
