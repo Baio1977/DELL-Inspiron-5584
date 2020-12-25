@@ -1,4 +1,4 @@
-# OpenCore DELL Inspiron 5584
+# Open Core DELL Inspiron 5584
 
 ### Computer Spec:
 
