@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20180427 (64-bit version)(RM)
- * Copyright (c) 2000 - 2018 Intel Corporation
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
  * 
- * Disassembling to non-symbolic legacy ASL operators
+ * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLYwqDi9.aml, Fri Dec 25 15:17:28 2020
+ * Disassembly of iASLAveCFo.aml, Sat Dec 26 15:45:35 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000825 (2085)
+ *     Length           0x0000085D (2141)
  *     Revision         0x02
- *     Checksum         0x9A
+ *     Checksum         0x71
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -20,41 +20,41 @@
  */
 DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
 {
-    External (_SB_.AC__, DeviceObj)    // (from opcode)
-    External (_SB_.ACOS, IntObj)    // (from opcode)
-    External (_SB_.ACSE, IntObj)    // (from opcode)
-    External (_SB_.PCI0, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.GFX0, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.HIDG, BuffObj)    // (from opcode)
-    External (_SB_.PCI0.I2C0, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.I2C0.TPD0, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.LPCB, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.LPCB.ECDV, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.LPCB.HPET, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.LPCB.MATH._STA, UnknownObj)    // (from opcode)
-    External (_SB_.PCI0.LPCB.PS2K, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.LPCB.PS2M, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.RP09, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.RP09.PXSX, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.RP13, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.RP13.PXSX, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.SBUS, DeviceObj)    // (from opcode)
-    External (_SB_.PR00, ProcessorObj)    // (from opcode)
-    External (GPHD, FieldUnitObj)    // (from opcode)
-    External (SSD0, IntObj)    // (from opcode)
-    External (SSH0, IntObj)    // (from opcode)
-    External (SSL0, IntObj)    // (from opcode)
-    External (STAS, IntObj)    // (from opcode)
+    External (_SB_.AC__, DeviceObj)
+    External (_SB_.ACOS, IntObj)
+    External (_SB_.ACSE, IntObj)
+    External (_SB_.PCI0, DeviceObj)
+    External (_SB_.PCI0.GFX0, DeviceObj)
+    External (_SB_.PCI0.HIDG, BuffObj)
+    External (_SB_.PCI0.I2C0, DeviceObj)
+    External (_SB_.PCI0.I2C0.TPD0, DeviceObj)
+    External (_SB_.PCI0.LPCB, DeviceObj)
+    External (_SB_.PCI0.LPCB.ECDV, DeviceObj)
+    External (_SB_.PCI0.LPCB.HPET, DeviceObj)
+    External (_SB_.PCI0.LPCB.MATH._STA, UnknownObj)
+    External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
+    External (_SB_.PCI0.LPCB.PS2M, DeviceObj)
+    External (_SB_.PCI0.RP09, DeviceObj)
+    External (_SB_.PCI0.RP09.PXSX, DeviceObj)
+    External (_SB_.PCI0.RP13, DeviceObj)
+    External (_SB_.PCI0.RP13.PXSX, DeviceObj)
+    External (_SB_.PCI0.SBUS, DeviceObj)
+    External (_SB_.PR00, ProcessorObj)
+    External (GPHD, FieldUnitObj)
+    External (SSD0, IntObj)
+    External (SSH0, IntObj)
+    External (SSL0, IntObj)
+    External (STAS, IntObj)
 
     Scope (\)
     {
         If (_OSI ("Darwin"))
         {
-            Store (0x02, GPHD)
-            Store (One, STAS)
-            Store (0x80, \_SB.ACOS)
-            Store (Zero, \_SB.ACSE)
-            Store (0x0F, \_SB.PCI0.LPCB.MATH._STA)
+            GPHD = 0x02
+            STAS = One
+            \_SB.ACOS = 0x80
+            \_SB.ACSE = Zero
+            \_SB.PCI0.LPCB.MATH._STA = 0x0F
         }
     }
 
@@ -123,17 +123,23 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                             Zero, 
                             Zero
                         })
-                        Store (Arg0, Index (PKG, Zero))
-                        Store (Arg1, Index (PKG, One))
-                        Store (Arg2, Index (PKG, 0x02))
-                        Return (PKG)
+                        PKG [Zero] = Arg0
+                        PKG [One] = Arg1
+                        PKG [0x02] = Arg2
+                        Return (PKG) /* \_SB_.PCI0.I2C0.PKGX.PKG_ */
                     }
+                }
 
+                If (_OSI ("Darwin"))
+                {
                     Method (SSCN, 0, NotSerialized)
                     {
                         Return (PKGX (SSH0, SSL0, SSD0))
                     }
+                }
 
+                If (_OSI ("Darwin"))
+                {
                     Method (FMCN, 0, NotSerialized)
                     {
                         Name (PKG, Package (0x03)
@@ -142,7 +148,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                             0x012C, 
                             0x62
                         })
-                        Return (PKG)
+                        Return (PKG) /* \_SB_.PCI0.I2C0.FMCN.PKG_ */
                     }
                 }
 
@@ -153,13 +159,25 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         Name (OSYS, 0x07DC)
                     }
                 }
+
+                Method (_STA, 0, Serialized)  // _STA: Status
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (0x0F)
+                    }
+                    Else
+                    {
+                        Return (Zero)
+                    }
+                }
             }
 
             Scope (LPCB)
             {
                 Device (ARTC)
                 {
-                    Name (_HID, "ACPI000E")  // _HID: Hardware ID
+                    Name (_HID, "ACPI000E" /* Time and Alarm Device */)  // _HID: Hardware ID
                     Method (_GCP, 0, NotSerialized)  // _GCP: Get Capabilities
                     {
                         Return (0x05)
@@ -180,7 +198,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
 
                 Device (DMAC)
                 {
-                    Name (_HID, EisaId ("PNP0200"))  // _HID: Hardware ID
+                    Name (_HID, EisaId ("PNP0200") /* PC-class DMA Controller */)  // _HID: Hardware ID
                     Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
                     {
                         IO (Decode16,
@@ -241,7 +259,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
 
                 Device (FWHD)
                 {
-                    Name (_HID, EisaId ("INT0800"))  // _HID: Hardware ID
+                    Name (_HID, EisaId ("INT0800") /* Intel 82802 Firmware Hub Device */)  // _HID: Hardware ID
                     Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
                     {
                         Memory32Fixed (ReadOnly,
@@ -442,11 +460,11 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         Name (_CID, "diagsvault")  // _CID: Compatible ID
                         Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                         {
-                            If (LNot (Arg2))
+                            If (!Arg2)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x57                                           
+                                     0x57                                             // W
                                 })
                             }
 
@@ -527,11 +545,11 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
-                    If (LEqual (Arg2, Zero))
+                    If ((Arg2 == Zero))
                     {
                         Return (Buffer (One)
                         {
-                             0x03                                           
+                             0x03                                             // .
                         })
                     }
 
@@ -549,11 +567,11 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
             Name (_ADR, Zero)  // _ADR: Address
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
             {
-                If (LEqual (Arg2, Zero))
+                If ((Arg2 == Zero))
                 {
                     Return (Buffer (One)
                     {
-                         0x03                                           
+                         0x03                                             // .
                     })
                 }
 
