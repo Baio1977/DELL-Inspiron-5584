@@ -159,18 +159,6 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         Name (OSYS, 0x07DC)
                     }
                 }
-
-                Method (_STA, 0, Serialized)  // _STA: Status
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
-                    }
-                }
             }
 
             Scope (LPCB)
