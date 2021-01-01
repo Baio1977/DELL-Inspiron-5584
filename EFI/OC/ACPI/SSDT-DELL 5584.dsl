@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLAveCFo.aml, Sat Dec 26 15:45:35 2020
+ * Disassembly of iASLzmuCJg.aml, Fri Jan  1 12:14:04 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000085D (2141)
+ *     Length           0x000007FD (2045)
  *     Revision         0x02
- *     Checksum         0x71
+ *     Checksum         0x3A
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -25,11 +25,9 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (_SB_.ACSE, IntObj)
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.GFX0, DeviceObj)
-    External (_SB_.PCI0.HIDG, BuffObj)
     External (_SB_.PCI0.I2C0, DeviceObj)
     External (_SB_.PCI0.I2C0.TPD0, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
-    External (_SB_.PCI0.LPCB.ECDV, DeviceObj)
     External (_SB_.PCI0.LPCB.HPET, DeviceObj)
     External (_SB_.PCI0.LPCB.MATH._STA, UnknownObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
@@ -128,18 +126,12 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                         PKG [0x02] = Arg2
                         Return (PKG) /* \_SB_.PCI0.I2C0.PKGX.PKG_ */
                     }
-                }
 
-                If (_OSI ("Darwin"))
-                {
                     Method (SSCN, 0, NotSerialized)
                     {
                         Return (PKGX (SSH0, SSL0, SSD0))
                     }
-                }
 
-                If (_OSI ("Darwin"))
-                {
                     Method (FMCN, 0, NotSerialized)
                     {
                         Name (PKG, Package (0x03)
