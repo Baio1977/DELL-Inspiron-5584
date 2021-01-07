@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLzmuCJg.aml, Fri Jan  1 12:14:04 2021
+ * Disassembly of iASLh17szX.aml, Thu Jan  7 12:07:56 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x000007FD (2045)
+ *     Length           0x0000086F (2159)
  *     Revision         0x02
- *     Checksum         0x3A
+ *     Checksum         0x95
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -24,6 +24,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (_SB_.ACOS, IntObj)
     External (_SB_.ACSE, IntObj)
     External (_SB_.PCI0, DeviceObj)
+    External (_SB_.PCI0.CNVW, DeviceObj)
     External (_SB_.PCI0.GFX0, DeviceObj)
     External (_SB_.PCI0.I2C0, DeviceObj)
     External (_SB_.PCI0.I2C0.TPD0, DeviceObj)
@@ -43,6 +44,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (SSH0, IntObj)
     External (SSL0, IntObj)
     External (STAS, IntObj)
+    External (XPRW, MethodObj)    // 2 Arguments
 
     Scope (\)
     {
@@ -72,6 +74,21 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
 
         Scope (PCI0)
         {
+            Scope (CNVW)
+            {
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (Zero)
+                    }
+                    Else
+                    {
+                        Return (0x0F)
+                    }
+                }
+            }
+
             Device (GAUS)
             {
                 Name (_ADR, 0x00080000)  // _ADR: Address
@@ -580,6 +597,32 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 }
             }
         }
+    }
+
+    Method (UPRW, 2, NotSerialized)
+    {
+        If (_OSI ("Darwin"))
+        {
+            If ((0x6D == Arg0))
+            {
+                Return (Package (0x02)
+                {
+                    0x6D, 
+                    Zero
+                })
+            }
+
+            If ((0x0D == Arg0))
+            {
+                Return (Package (0x02)
+                {
+                    0x0D, 
+                    Zero
+                })
+            }
+        }
+
+        Return (XPRW (Arg0, Arg1))
     }
 }
 
