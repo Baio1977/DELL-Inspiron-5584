@@ -74,7 +74,7 @@
 | [itlwm/AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi |
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.9 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.9 | SMC chip emulation |
-| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C) | 2.6.1 | Intel I2C drivers |
+| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.1 | Intel I2C drivers |
 | [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx) | 2.3.0 | Realtek RTSX SD Card drivers |
 
 ## Credits
