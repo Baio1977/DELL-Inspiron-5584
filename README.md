@@ -13,7 +13,7 @@
 | NVMe             | Samsung 970 evo plus 512Gb         |
 | SSD              | Kingston A400 512gb                |
 | SmBios           | MacbookPro 15,2                    |
-| BootLoader       | OpenCore 0.6.4                     |
+| BootLoader       | OpenCore 0.6.6                     |
 
 ![infocatalina](./Screenshot/1.jpg)
 
@@ -66,15 +66,14 @@
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 11.0.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.4 | Default Bootloader|
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.6 | Default Bootloader|
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.0 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.5 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.5 | Handle/fix onboard audio |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.2 | Power management |
-| [itlwm/AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) | 1.1.0 | Handle WiFi |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.1.9 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.1.9 | SMC chip emulation |
-| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.1 | Intel I2C drivers |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.6 | Handle Graphics card |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.6 | Handle/fix onboard audio |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.3 | Power management |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.1 | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.0 | SMC chip emulation |
+| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.3 | Intel I2C drivers |
 | [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx) | 2.3.0 | Realtek RTSX SD Card drivers |
 
 ## Credits
