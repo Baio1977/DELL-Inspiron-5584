@@ -375,7 +375,7 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>AACbPg==</data>
-				<key>AAPL,slot-name</key>
+				<key>#AAPL,slot-name</key>
 				<string>Built In</string>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
