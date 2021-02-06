@@ -14,7 +14,7 @@
 | iGPU             | Intel® UHD Graphics 620            |
 | Display          | 1920x1080                          |
 | Audio            | Realtek ALC236                     |
-| Ram              | 8Gb ddr4 2400 Mhz                  |
+| Ram              | 16 Gb ddr4 2400 Mhz                |
 | Wifi + Bluetooth | BCM943602BAED                      |
 | NVMe             | Samsung 970 evo plus 512Gb         |
 | SSD              | Kingston A400 512gb                |
@@ -72,15 +72,14 @@
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 11.0.1 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.6 | Default Bootloader|
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.0 | Kext/process/framework/library patcher |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.6 | Handle Graphics card |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.6 | Handle/fix onboard audio |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) | 1.2.3 | Power management |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.6 | Default Bootloader                                    |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.1 | Kext/process/framework/library patcher                           |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.7 | Handle Graphics card                           |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.7 | Handle/fix onboard audio                                 |
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.1 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.0 | SMC chip emulation |
-| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.3 | Intel I2C drivers |
-| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx) | 2.3.0 | Realtek RTSX SD Card drivers |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.0 | SMC chip emulation                         |
+| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.3 | Intel I2C drivers                                        |
+| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx) | 2.3.0 | Realtek RTSX SD Card drivers                                 |
 
 ## Credits
 
