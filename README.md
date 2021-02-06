@@ -79,7 +79,7 @@
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.1 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.0 | SMC chip emulation                         |
 | [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.3 | Intel I2C drivers                                        |
-| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx) | 2.3.0 | Realtek RTSX SD Card drivers                                 |
+| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx/releases) | 2.3.0 | Realtek RTSX SD Card drivers                                 |
 
 ## Credits
 
