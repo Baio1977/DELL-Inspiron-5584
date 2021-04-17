@@ -19,7 +19,7 @@
 | NVMe             | Samsung 970 evo plus 512Gb         |
 | SSD              | Kingston A400 512gb                |
 | SmBios           | MacbookPro 15,2                    |
-| BootLoader       | OpenCore 0.6.6                     |
+| BootLoader       | OpenCore 0.6.8                     |
 
 ![infocatalina](./Screenshot/1.jpg)
 
@@ -71,7 +71,7 @@
 
 | Item | Version | Remark |
 | :--- | :--- | :--- |
-| MacOS | 11.0.1 | |
+| MacOS | 11.2.3 | |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.6 | Default Bootloader                                    |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.1 | Kext/process/framework/library patcher                           |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.7 | Handle Graphics card                           |
