@@ -72,7 +72,7 @@
 | Item | Version | Remark |
 | :--- | :--- | :--- |
 | MacOS | 11.2.3 | |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.6 | Default Bootloader                                    |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.6.8 | Default Bootloader                                    |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.1 | Kext/process/framework/library patcher                           |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.4.7 | Handle Graphics card                           |
 | [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.5.7 | Handle/fix onboard audio                                 |
