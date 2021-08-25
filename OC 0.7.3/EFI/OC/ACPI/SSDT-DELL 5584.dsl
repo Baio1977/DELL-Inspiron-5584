@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLu3h9d4.aml, Tue Aug 24 12:36:44 2021
+ * Disassembly of iASL2SfTZd.aml, Wed Aug 25 13:24:24 2021
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000839 (2105)
+ *     Length           0x000008B3 (2227)
  *     Revision         0x02
- *     Checksum         0xD3
+ *     Checksum         0x3F
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -32,6 +32,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (_SB_.PCI0.LPCB.MATH._STA, UnknownObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
     External (_SB_.PCI0.LPCB.PS2M, DeviceObj)
+    External (_SB_.PCI0.RP05.PXSX._OFF, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.RP09, DeviceObj)
     External (_SB_.PCI0.RP09.PXSX, DeviceObj)
     External (_SB_.PCI0.RP13, DeviceObj)
@@ -66,9 +67,24 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 {
                     Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
                     {
-                        0x18, 
+                        0x6F, 
                         0x03
                     })
+                }
+            }
+
+            If (_OSI ("Darwin"))
+            {
+                Device (DGPU)
+                {
+                    Name (_HID, "DGPU1000")  // _HID: Hardware ID
+                    Method (_INI, 0, NotSerialized)  // _INI: Initialize
+                    {
+                        If (CondRefOf (\_SB.PCI0.RP05.PXSX._OFF))
+                        {
+                            \_SB.PCI0.RP05.PXSX._OFF ()
+                        }
+                    }
                 }
             }
 
