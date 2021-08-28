@@ -74,7 +74,7 @@
 - To switch back to normal speakers from laptop
 - alc-verb 0x19 SET_PIN_WIDGET_CONTROL 0x0
 
-Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleALC only needed.## Info Section SSDT Inspiron 5584
+Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleALC only needed.
 
 ## Info Section SSDT Inspiron 5584
 
