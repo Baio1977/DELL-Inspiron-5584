@@ -19,7 +19,7 @@
 | NVMe             | Samsung 970 evo plus 512Gb         |
 | SSD              | Kingston A400 512gb                |
 | SmBios           | MacbookPro 15,2                    |
-| BootLoader       | OpenCore 0.7.3                     |
+| BootLoader       | OpenCore 0.7.4                     |
 
 ![infocatalina](./Screenshot/1.jpg)
 
@@ -86,17 +86,17 @@ Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleA
 
 ## Update tracker
 
-| Item | Version | Remark |
-| :--- | :--- | :--- |
-| MacOS | 11.5 | |
+| Item   | Version | Remark  |
+| :---   | :---    | :---    |
+| MacOS  | 11.6.1  |         |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.3 | Default Bootloader                                    |
 | [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.6 | Kext/process/framework/library patcher                           |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.3 | Handle Graphics card                           |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.4| Handle/fix onboard audio                                 |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.4| Handle/fix onboard audio                                  |
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.4 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.7 | SMC chip emulation                         |
 | [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.5 | Intel I2C drivers                                        |
-| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx/releases) | 2.5.0 | Realtek RTSX SD Card drivers                                 |
+| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx/releases) | 2.5.0 | Realtek RTSX SD Card drivers                        |
 
 ## Credits
 
