@@ -102,8 +102,7 @@ Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleA
 
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and all the lovely hackintosh work.
 - [Apple](https://apple.com) for macOS;
-- [daliansky](https://github.com/daliansky)
-- [Dortiana](https://github.com/dortania)
+- [Dortania](https://github.com/dortania)
 - [Hackintoshlifeit](https://github.com/Hackintoshlifeit)
 - [rehabman](https://github.com/RehabMan)
 
