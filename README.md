@@ -76,7 +76,7 @@
 
 Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleALC only needed.
 
-- Thanks Samnan
+- Thanks [Samnan](https://github.com/Samnan?tab=repositories)
 
 ## Info Section SSDT Inspiron 5584
 
