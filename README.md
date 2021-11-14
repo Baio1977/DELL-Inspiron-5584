@@ -89,11 +89,11 @@ Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleA
 | Item   | Version | Remark  |
 | :---   | :---    | :---    |
 | MacOS  | 11.6.1  |         |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.4 | Default Bootloader                                    |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.6 | Kext/process/framework/library patcher                           |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.4 | Handle Graphics card                           |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.5| Handle/fix onboard audio                                  |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.5 | Enable keyboard, alternative trackpad driver |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.6 | Default Bootloader                                    |
+| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.7 | Kext/process/framework/library patcher                           |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.5 | Handle Graphics card                           |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.7| Handle/fix onboard audio                                  |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.7 | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.8 | SMC chip emulation                         |
 | [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.5 | Intel I2C drivers                                        |
 | [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx/releases) | 2.5.0 | Realtek RTSX SD Card drivers                        |
