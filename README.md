@@ -19,7 +19,7 @@
 | NVMe             | Samsung 970 evo plus 512Gb         |
 | SSD              | Kingston A400 512gb                |
 | SmBios           | MacbookPro 15,2                    |
-| BootLoader       | OpenCore 0.7.4                     |
+| BootLoader       | OpenCore                           |
 
 ![infocatalina](./Screenshot/1.jpg)
 
