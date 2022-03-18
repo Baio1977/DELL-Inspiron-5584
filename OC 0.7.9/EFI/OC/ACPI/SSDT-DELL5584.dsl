@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20210331 (64-bit version)
- * Copyright (c) 2000 - 2021 Intel Corporation
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLieSjw7.aml, Fri Oct  1 22:20:56 2021
+ * Disassembly of iASLdiuO8a.aml, Fri Mar 18 13:01:12 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000078E (1934)
+ *     Length           0x00000788 (1928)
  *     Revision         0x02
- *     Checksum         0x69
+ *     Checksum         0x73
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -35,9 +35,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
     External (_SB_.PCI0.RP13.PXSX, DeviceObj)
     External (_SB_.PCI0.SBUS, DeviceObj)
     External (_SB_.PR00, ProcessorObj)
-    External (FMD0, IntObj)
-    External (FMH0, IntObj)
-    External (FML0, IntObj)
+    External (HPTE, IntObj)
     External (SSD0, IntObj)
     External (SSH0, IntObj)
     External (SSL0, IntObj)
@@ -53,6 +51,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
             \_SB.ACOS = 0x80
             \_SB.ACSE = Zero
             TPDM = Zero
+            HPTE = Zero
         }
 
         Scope (_SB)
@@ -63,7 +62,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 {
                     Name (_PRW, Package (0x02)  // _PRW: Power Resources for Wake
                     {
-                        0x6F, 
+                        0x1C, 
                         0x03
                     })
                 }
@@ -112,7 +111,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                 {
                     If (_OSI ("Darwin"))
                     {
-                        Method (PKG3, 3, Serialized)
+                        Method (PKGX, 3, Serialized)
                         {
                             Name (PKG, Package (0x03)
                             {
@@ -123,7 +122,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                             PKG [Zero] = Arg0
                             PKG [One] = Arg1
                             PKG [0x02] = Arg2
-                            Return (PKG) /* \_SB_.PCI0.I2C0.PKG3.PKG_ */
+                            Return (PKG) /* \_SB_.PCI0.I2C0.PKGX.PKG_ */
                         }
                     }
 
@@ -131,7 +130,7 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                     {
                         Method (SSCN, 0, NotSerialized)
                         {
-                            Return (PKG3 (SSH0, SSL0, SSD0))
+                            Return (PKGX (SSH0, SSL0, SSD0))
                         }
                     }
 
@@ -139,7 +138,13 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
                     {
                         Method (FMCN, 0, NotSerialized)
                         {
-                            Return (PKG3 (FMH0, FML0, FMD0))
+                            Name (PKG, Package (0x03)
+                            {
+                                0x0101, 
+                                0x012C, 
+                                0x62
+                            })
+                            Return (PKG) /* \_SB_.PCI0.I2C0.FMCN.PKG_ */
                         }
                     }
 
