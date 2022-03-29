@@ -87,57 +87,58 @@ Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleA
 ## Patch Touchpad
 
 ## TouchPad and Gesture
+
 ```swift
 
-                Scope (I2C0)
+    Scope (_SB.PCI0.I2C0)
+    {
+        If (_OSI ("Darwin"))
+        {
+            Method (PKGX, 3, Serialized)
+            {
+                Name (PKG, Package (0x03)
                 {
-                    If (_OSI ("Darwin"))
-                    {
-                        Method (PKGX, 3, Serialized)
-                        {
-                            Name (PKG, Package (0x03)
-                            {
-                                Zero, 
-                                Zero, 
-                                Zero
-                            })
-                            PKG [Zero] = Arg0
-                            PKG [One] = Arg1
-                            PKG [0x02] = Arg2
-                            Return (PKG) /* \_SB_.PCI0.I2C0.PKGX.PKG_ */
-                        }
-                    }
+                    Zero, 
+                    Zero, 
+                    Zero
+                })
+                PKG [Zero] = Arg0
+                PKG [One] = Arg1
+                PKG [0x02] = Arg2
+                Return (PKG) /* \_SB_.PCI0.I2C0.PKGX.PKG_ */
+            }
+        }
 
-                    If (_OSI ("Darwin"))
-                    {
-                        Method (SSCN, 0, NotSerialized)
-                        {
-                            Return (PKGX (SSH0, SSL0, SSD0))
-                        }
-                    }
+        If (_OSI ("Darwin"))
+        {
+            Method (SSCN, 0, NotSerialized)
+            {
+                Return (PKGX (SSH0, SSL0, SSD0))
+            }
+        }
 
-                    If (_OSI ("Darwin"))
-                    {
-                        Method (FMCN, 0, NotSerialized)
-                        {
-                            Name (PKG, Package (0x03)
-                            {
-                                0x0101, 
-                                0x012C, 
-                                0x62
-                            })
-                            Return (PKG) /* \_SB_.PCI0.I2C0.FMCN.PKG_ */
-                        }
-                    }
-
-                    Scope (TPD0)
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Name (OSYS, 0x07DC)
-                        }
-                    }
-                }
+        If (_OSI ("Darwin"))
+        {
+            Method (FMCN, 0, NotSerialized)
+            {
+                Name (PKG, Package (0x03)
+                {
+                    0x0101, 
+                    0x012C, 
+                    0x62
+                })
+                Return (PKG) /* \_SB_.PCI0.I2C0.FMCN.PKG_ */
+            }
+        }
+ 
+        Scope (TPD0)
+        {
+            If (_OSI ("Darwin"))
+            {
+                 Name (OSYS, 0x07DC)
+        }
+    }
+}
 ```               
 ## Credits
 
