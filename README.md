@@ -84,20 +84,61 @@ Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleA
 
 ![SSDT Dell Inspiron 5584](./Screenshot/9.png)
 
-## Update tracker
+## Patch Touchpad
 
-| Item   | Version | Remark  |
-| :---   | :---    | :---    |
-| MacOS  | 11.6.1  |         |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) | 0.7.8 | Default Bootloader                                    |
-| [Lilu](https://github.com/acidanthera/Lilu/releases) | 1.5.9 | Kext/process/framework/library patcher                           |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases) | 1.5.8 | Handle Graphics card                           |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases) | 1.6.9| Handle/fix onboard audio                                  |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases) | 2.2.8 | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases) | 1.2.8 | SMC chip emulation                         |
-| [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C/releases) | 2.6.5 | Intel I2C drivers                                        |
-| [Sinetek-rtsx](https://github.com/cholonam/Sinetek-rtsx/releases) | 2.5.0 | Realtek RTSX SD Card drivers                        |
+## TouchPad and Gesture
+```swift
 
+                Scope (I2C0)
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Method (PKGX, 3, Serialized)
+                        {
+                            Name (PKG, Package (0x03)
+                            {
+                                Zero, 
+                                Zero, 
+                                Zero
+                            })
+                            PKG [Zero] = Arg0
+                            PKG [One] = Arg1
+                            PKG [0x02] = Arg2
+                            Return (PKG) /* \_SB_.PCI0.I2C0.PKGX.PKG_ */
+                        }
+                    }
+
+                    If (_OSI ("Darwin"))
+                    {
+                        Method (SSCN, 0, NotSerialized)
+                        {
+                            Return (PKGX (SSH0, SSL0, SSD0))
+                        }
+                    }
+
+                    If (_OSI ("Darwin"))
+                    {
+                        Method (FMCN, 0, NotSerialized)
+                        {
+                            Name (PKG, Package (0x03)
+                            {
+                                0x0101, 
+                                0x012C, 
+                                0x62
+                            })
+                            Return (PKG) /* \_SB_.PCI0.I2C0.FMCN.PKG_ */
+                        }
+                    }
+
+                    Scope (TPD0)
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Name (OSYS, 0x07DC)
+                        }
+                    }
+                }
+```               
 ## Credits
 
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and all the lovely hackintosh work.
