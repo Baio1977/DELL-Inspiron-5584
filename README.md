@@ -78,14 +78,6 @@ Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleA
 
 - Thanks [Samnan](https://github.com/Samnan?tab=repositories)
 
-## Info Section SSDT Inspiron 5584
-
-![SSDT Dell Inspiron 5584](./Screenshot/5.png)
-
-![SSDT Dell Inspiron 5584](./Screenshot/9.png)
-
-## Patch Touchpad
-
 ## TouchPad and Gesture
 
 ```swift
@@ -139,7 +131,13 @@ Note: No longer needed VerbStub.kext and CodecCommander.kext in OC/Kexts. AppleA
         }
     }
 }
-```               
+```   
+## Info Section SSDT Inspiron 5584
+
+![SSDT Dell Inspiron 5584](./Screenshot/5.png)
+
+![SSDT Dell Inspiron 5584](./Screenshot/9.png)
+
 ## Credits
 
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and all the lovely hackintosh work.
