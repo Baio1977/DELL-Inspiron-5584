@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLdiuO8a.aml, Fri Mar 18 13:01:12 2022
+ * Disassembly of iASLttx8uO.aml, Sun Apr 24 09:31:24 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000788 (1928)
+ *     Length           0x00000797 (1943)
  *     Revision         0x02
- *     Checksum         0x73
+ *     Checksum         0xB3
  *     OEM ID           "HACK"
  *     OEM Table ID     "HackLife"
  *     OEM Revision     0x00000000 (0)
@@ -289,30 +289,33 @@ DefinitionBlock ("", "SSDT", 2, "HACK", "HackLife", 0x00000000)
 
                     Scope (PS2K)
                     {
-                        Name (RMCF, Package (0x04)
+                        If (_OSI ("Darwin"))
                         {
-                            "Mouse", 
-                            Package (0x02)
+                            Name (RMCF, Package (0x04)
                             {
-                                "ActLikeTrackpad", 
-                                ">y"
-                            }, 
-
-                            "Keyboard", 
-                            Package (0x02)
-                            {
-                                "Custom PS2 Map", 
-                                Package (0x06)
+                                "Mouse", 
+                                Package (0x02)
                                 {
-                                    Package (0x00){}, 
-                                    "46=0", 
-                                    "e045=0", 
-                                    "e037=64", 
-                                    "57=65", 
-                                    "58=66"
+                                    "ActLikeTrackpad", 
+                                    ">y"
+                                }, 
+
+                                "Keyboard", 
+                                Package (0x02)
+                                {
+                                    "Custom PS2 Map", 
+                                    Package (0x06)
+                                    {
+                                        Package (0x00){}, 
+                                        "46=0", 
+                                        "e045=0", 
+                                        "e037=64", 
+                                        "57=65", 
+                                        "58=66"
+                                    }
                                 }
-                            }
-                        })
+                            })
+                        }
                     }
                 }
 
