@@ -25,7 +25,7 @@
                     <key>BaseSkip</key>
                     <integer>0</integer>
                     <key>Comment</key>
-                    <string>Rename GPRW to XPRW</string>
+                    <string>change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml</string>
                     <key>Count</key>
                     <integer>0</integer>
                     <key>Enabled</key>
@@ -161,7 +161,7 @@
                     <key>AAPL,slot-name</key>
                     <string>Internal@0,21,0</string>
                     <key>device_type</key>
-                    <string>???</string>
+                    <string>I2C0 controller</string>
                     <key>model</key>
                     <string>Cannon Point-LP Serial IO I2C Controller #0</string>
                 </dict>
@@ -170,7 +170,7 @@
                     <key>AAPL,slot-name</key>
                     <string>Internal@0,21,1</string>
                     <key>device_type</key>
-                    <string>???</string>
+                    <string>I2C1 controller</string>
                     <key>model</key>
                     <string>Cannon Point-LP Serial IO I2C Controller #1</string>
                 </dict>
@@ -181,7 +181,7 @@
                     <key>device_type</key>
                     <string>Communication controller</string>
                     <key>model</key>
-                    <string>Cannon Point-LP MEI Controller #1</string>
+                    <string>Cannon Point-LP IMEI Controller</string>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x17,0x0)</key>
                 <dict>
@@ -255,7 +255,7 @@
                     <key>AAPL,slot-name</key>
                     <string>Internal@0,31,5</string>
                     <key>device_type</key>
-                    <string>???</string>
+                    <string>XSPI controller</string>
                     <key>model</key>
                     <string>Cannon Point-LP SPI Controller</string>
                 </dict>
@@ -297,7 +297,7 @@
                     <key>device_type</key>
                     <string>Signal processing controller</string>
                     <key>model</key>
-                    <string>Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem</string>
+                    <string>8th Gen Core Processor Thermal Subsystem</string>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x8,0x0)</key>
                 <dict>
@@ -306,7 +306,7 @@
                     <key>device_type</key>
                     <string>System peripheral</string>
                     <key>model</key>
-                    <string>Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model</string>
+                    <string>8th Gen Core Processor Gaussian Mixture Model</string>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -482,13 +482,31 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>RestrictEvents.kext</string>
+                    <string>FeatureUnlock.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.7</string>
+                    <string>V1.0.8</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/RestrictEvents</string>
+                    <string>Contents/MacOS/FeatureUnlock</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>NVMeFix.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.9</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/NVMeFix</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -830,11 +848,7 @@
             </array>
             <key>Security</key>
             <dict>
-                <key>AllowNvramReset</key>
-                <true/>
                 <key>AllowSetDefault</key>
-                <true/>
-                <key>AllowToggleSip</key>
                 <true/>
                 <key>ApECID</key>
                 <integer>0</integer>
@@ -1079,6 +1093,16 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
+                    <string>btrfs_x64.efi</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
                     <string>CrScreenshotDxe.efi</string>
                 </dict>
                 <dict>
@@ -1089,7 +1113,7 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
-                    <string>OpenCanopy.efi</string>
+                    <string>ext4_x64.efi</string>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -1099,7 +1123,17 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
-                    <string>OpenHfsPlus.efi</string>
+                    <string>HfsPlus.efi</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>OpenCanopy.efi</string>
                 </dict>
                 <dict>
                     <key>Arguments</key>
