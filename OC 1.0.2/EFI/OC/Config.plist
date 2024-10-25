@@ -135,6 +135,8 @@
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
+                    <key>AAPL,GfxYTile</key>
+                    <data>AQAAAA==</data>
                     <key>AAPL,ig-platform-id</key>
                     <data>CQCbPg==</data>
                     <key>device-id</key>
@@ -390,7 +392,7 @@
                     <key>BundlePath</key>
                     <string>VoodooPS2Controller.kext</string>
                     <key>Comment</key>
-                    <string>V</string>
+                    <string>V2.3.6</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -444,7 +446,7 @@
                     <key>BundlePath</key>
                     <string>VoodooI2C.kext/Contents/PlugIns/VoodooInput.kext</string>
                     <key>Comment</key>
-                    <string>V</string>
+                    <string>V1.1.4</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -498,7 +500,7 @@
                     <key>BundlePath</key>
                     <string>VoodooI2C.kext</string>
                     <key>Comment</key>
-                    <string>V</string>
+                    <string>V2.8</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
